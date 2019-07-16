@@ -258,9 +258,15 @@ body {
     margin-top: 13px;
     text-decoration: none;
     text-align: right;
+    color: #1c1c1c;
 }
 
 .hot-deal-content {
+    display: grid;
+    grid: auto / auto auto auto auto
+}
+
+.magazine-content {
     display: grid;
     grid: auto / auto auto auto auto
 }
@@ -659,7 +665,7 @@ body {
 
 .magazine-content h3 {
     color: #1c1c1c;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 1.67;
@@ -801,4 +807,15 @@ footer {
     font-size: 13px;
     padding: 10px 0;
     color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* reponsive Ipad */
+
+.top-header-ipad {
+    display: none;
+}
+
+.slick-dots {
+    display: none;
 }
