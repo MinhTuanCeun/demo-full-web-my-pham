@@ -1,0 +1,153 @@
+.main-list-show-product {
+    display: grid;
+    grid: 100% / 20% 80%;
+    margin: 1% 5% 2%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.side-bar-title h3 {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 10px;
+    font-weight: 600;
+    color: #1c1c1c;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.side-bar-content ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.side-bar-content ul li {
+    padding: 10px;
+}
+
+.side-bar-content ul li a {
+    font-size: 14px;
+    padding-left: 0px;
+    padding-right: 25px;
+    color: #1c1c1c;
+    white-space: normal;
+    position: relative;
+    display: table;
+    width: 100%;
+    text-decoration: none;
+}
+
+.side-bar-content ul li a:hover {
+    color: red;
+}
+
+.sort-cate {
+    margin-top: 5px;
+    display: inline-flex;
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 5px;
+}
+
+.sort-cate h3 {
+    color: #000;
+    font-size: 14px;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.sort-cate ul {
+    margin: 0;
+    padding: 0;
+    list-style: none inside;
+    display: flex;
+}
+
+.sort-cate ul li {
+    padding: 0 0 7px 7px;
+}
+
+.sort-cate ul li a {
+    color: #000;
+    font-size: 14px;
+    position: relative;
+    text-decoration: none;
+}
+
+.sort-cate ul li a i {
+    height: 14px;
+    width: 14px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -3px 0px 0 0;
+    position: relative;
+}
+
+.sort-cate ul li a i:hover {
+    border: 2px solid #f33;
+    height: 16px;
+    width: 16px;
+}
+
+.sort-cate ul li a i::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #f33;
+    position: absolute;
+    border-radius: 50%;
+    margin: 3px;
+    visibility: hidden;
+}
+
+.sort-cate ul li a i:hover::before {
+    visibility: unset;
+}
+
+.product-list {
+    width: 210px !important;
+}
+
+.page-number {
+    margin-top: 10px;
+}
+
+.page-number ul {
+    margin: 0;
+    padding: 0;
+    list-style: none inside;
+    display: flex;
+    justify-content: center;
+}
+
+.page-number ul li {
+    padding: 0;
+}
+
+.page-number ul li a {
+    color: #000;
+    font-size: 14px;
+    position: relative;
+    text-decoration: none;
+    margin: 0 2px;
+    width: 32px;
+    background: #fff;
+    text-align: center;
+    height: 32px;
+    font-size: 14px;
+    line-height: 32px;
+    display: block;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    border-bottom-right-radius: 3px !important;
+    border-bottom-left-radius: 3px !important;
+}
+
+.page-number ul li a:hover {
+    background-color: #fff;
+    border: 1px solid #757779;
+    color: #000;
+}

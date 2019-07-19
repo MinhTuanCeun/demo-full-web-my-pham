@@ -49,7 +49,7 @@
         grid: auto / auto auto;
         margin-left: 25px;
     }
-    .magazine-content {
+    .magazine-show {
         grid: auto / auto auto auto;
     }
     .btn-show-all a {
@@ -85,13 +85,16 @@
         transform: translateX(0);
     }
     .login-header-ipad {
-        margin: 0 10px;
+        margin: 20px 10px;
         position: relative;
     }
     .login-header-ipad a img {
         max-height: 55px;
         display: block;
         margin: auto;
+    }
+    .form-login-ipad {
+        display: block;
     }
     .first-menu-ipad {
         margin-top: 15px;
@@ -182,7 +185,7 @@
     .img-sale-item {
         padding: 5px 5px;
     }
-    .magazine-content {
+    .magazine-show {
         display: block;
     }
     .magazine-card {
