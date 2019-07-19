@@ -9,12 +9,13 @@
     color: rgba(112, 126, 137, 0.5);
     padding: 0;
     list-style: none;
-    display: flex;
     margin: 0;
+    margin-left: 20px;
 }
 
 .bread-crumb-detail ul li {
     padding: 10px 5px;
+    display: inline;
 }
 
 .bread-crumb-detail ul li span {
@@ -49,6 +50,10 @@
 .detail-product {
     display: grid;
     grid: auto / auto auto;
+}
+
+.detail-img img {
+    width: 100%;
 }
 
 .title-detail h1 {

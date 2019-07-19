@@ -239,4 +239,57 @@
         padding: 0;
         display: block;
     }
+    .main-list-show-product {
+        display: block !important;
+    }
+    .side-bar {
+        display: none;
+    }
+    .sort-cate {
+        display: none !important;
+    }
+    .detail-product {
+        display: block !important;
+    }
+    .detail-info {
+        margin: 4%;
+    }
+    .show-cart {
+        display: block !important;
+    }
+    .show-cart-content-info a h3 {
+        font-size: 12px !important;
+    }
+    .show-cart-content-info p a {
+        font-size: 10px !important;
+    }
+    .cart-title {
+        margin-left: 20px;
+    }
+    .show-cart-content-price {
+        display: none;
+    }
+    .show-cart-content {
+        grid: 100% / 20% 60% 20% !important;
+    }
+    .show-cart-content-price-mobie {
+        display: block !important;
+    }
+    .show-cart-content-price-mobie p {
+        font-size: 14px;
+        font-weight: 550;
+    }
+    .show-cart-content-qty .item-popup-count {
+        width: 20px !important;
+        height: 20px !important;
+        font-size: 13px !important;
+    }
+    .show-cart-content-qty .number-sidebar {
+        min-height: 18px !important;
+        height: 16px !important;
+        font-size: 12px !important;
+        font-weight: 400;
+        width: 20px;
+        margin-top: 9%;
+    }
 }

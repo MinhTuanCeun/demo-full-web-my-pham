@@ -106,42 +106,40 @@
 }
 
 .fee-payment {
-    display: flex;
+    display: grid;
+    grid: auto / auto auto;
     border-bottom: 1px solid #f4f4f4;
     font-size: 16px;
+    padding: 20px 0;
 }
 
-.fee-payment p {
-    display: flex;
-}
-
-.fee-payment p span {
-    font-weight: 500;
+.fee-payment span {
+    font-weight: 550;
     color: #1c1c1c;
 }
 
 .fee-payment strong {
     flex-direction: row-reverse;
     font-weight: 700;
+    text-align: right;
 }
 
 .fee-total-payment {
-    display: flex;
+    display: grid;
+    grid: auto / auto auto;
     font-size: 16px;
+    padding: 20px 0;
 }
 
-.fee-total-payment p {
-    display: flex;
-}
-
-.fee-total-payment p span {
-    font-weight: 500;
+.fee-total-payment span {
+    font-weight: 550;
     color: #1c1c1c;
 }
 
-.fee-payment strong {
-    flex-direction: row-reverse;
+.fee-total-payment strong {
     font-weight: 700;
+    text-align: right;
+    font-size: 22px;
 }
 
 .btn-submit-cart {
@@ -252,4 +250,8 @@
 
 .show-cart-payment {
     margin: 7%;
+}
+
+.show-cart-content-price-mobie {
+    display: none;
 }
