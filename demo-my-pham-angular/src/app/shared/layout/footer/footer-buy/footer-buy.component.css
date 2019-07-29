@@ -1,0 +1,27 @@
+.footer-buy ul {
+    margin-bottom: 15px;
+    line-height: 1.71429em;
+    list-style: none inside;
+    padding-left: 0;
+}
+
+.footer-buy h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footer-buy ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: .2s all;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.footer-buy ul li a:hover {
+    color: #b50505;
+}

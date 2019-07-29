@@ -1,0 +1,48 @@
+<div class="checkout-cart">
+    <div class="checkout-title">
+        <h2>Đơn hàng(<span>{{totalCount()}}</span> sản phẩm)</h2>
+        <hr>
+    </div>
+    <div class="checkout-content">
+        <div class="list-checkout">
+            <table class="product-table">
+                <tbody>
+                    <tr *ngFor="let item of listCart" class="item-cart">
+                        <td class="item-cart-img">
+                            <span matBadge="{{item.qty}}" matBadgeOverlap="false"></span>
+                            <img src="{{item.urlImg}}" alt="">
+                        </td>
+                        <td style="padding: 1% 6%;">
+                            <span>{{item.title}}</span>
+                        </td>
+                        <td>
+                            <span style="font-size: 16px; font-weight: 600">{{formmatPrice(totalItem(item))}}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="diskout-checkout">
+            <input type="text" placeholder="Nhập mã giảm giá">
+            <button>Áp dụng</button>
+            <hr>
+        </div>
+        <div class="pay-checkout">
+            <span>Tạm tính</span>
+            <span style="text-align: right;">{{formmatPrice(totalPrice())}}</span>
+            <span>Phí vận chuyển</span>
+            <span style="text-align: right;">40.000₫</span>
+        </div>
+        <hr>
+        <div class="total-checkout">
+            <span>Tổng cộng</span>
+            <span style="text-align: right; font-size: 18px; font-weight: 550">{{formmatPrice(total())}}</span>
+        </div>
+        <hr>
+        <div class="end-checkout">
+            <a href="">Quay về giỏ hàng</a>
+            <button>ĐẶT HÀNG</button>
+        </div>
+    </div>
+</div>

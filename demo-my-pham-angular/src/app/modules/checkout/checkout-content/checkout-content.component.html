@@ -1,0 +1,93 @@
+<div class="main-content">
+    <div class="info-buying">
+        <h3>Thông tin mua hàng</h3>
+        <p>
+            <mat-form-field class="smallInput" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput placeholder="abc@gmail.com">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field class="smallInput" appearance="outline">
+                <mat-label>Họ và tên</mat-label>
+                <input type="text" matInput placeholder="phan minh tuan">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field class="smallInput" appearance="outline">
+                <mat-label>Số điện thoại</mat-label>
+                <input type="email" matInput>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field class="smallInput" appearance="outline">
+                <mat-label>Địa chỉ</mat-label>
+                <input type="email" matInput>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field>
+                <mat-label>Favorite animal</mat-label>
+                <mat-select [formControl]="animalControl" required>
+                    <mat-option>--</mat-option>
+                    <mat-option *ngFor="let animal of animals" [value]="animal">
+                        {{animal.name}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="animalControl.hasError('required')">Please choose an animal</mat-error>
+                <mat-hint>{{animalControl.value?.sound}}</mat-hint>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field>
+                <mat-label>Favorite animal</mat-label>
+                <mat-select [formControl]="animalControl" required>
+                    <mat-option>--</mat-option>
+                    <mat-option *ngFor="let animal of animals" [value]="animal">
+                        {{animal.name}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="animalControl.hasError('required')">Please choose an animal</mat-error>
+                <mat-hint>{{animalControl.value?.sound}}</mat-hint>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field class="smallInput" appearance="outline">
+                <mat-label>Ghi chú</mat-label>
+                <textarea matInput></textarea>
+            </mat-form-field>
+        </p>
+    </div>
+    <div class="info-shiping">
+        <h3>Vận chuyển</h3>
+        <div class="content-box__row">
+            <div class="radio-wrapper">
+                <mat-radio-group class="smallRadio" aria-label="Select an option">
+                    <mat-radio-button value="1">
+                        <span>Giao hàng tận nơi</span>
+                    </mat-radio-button>
+                </mat-radio-group>
+                <div class="price-ship">
+                    <span>40.000₫</span>
+                </div>
+            </div>
+        </div>
+        <h3>Ship Cod</h3>
+        <div class="content-box__row">
+            <div class="radio-wrapper">
+                <mat-radio-group class="smallRadio" aria-label="Select an option">
+                    <mat-radio-button value="1">
+                        <span>Thanh toán khi giao hàng (COD)</span>
+                    </mat-radio-button>
+                </mat-radio-group>
+                <div class="price-ship">
+                    <span><fa-icon icon="shipping-fast"></fa-icon></span>
+                </div>
+            </div>
+            <div class="des-ship-cod">
+                <p>Bạn chỉ phải thanh toán khi nhận được hàng</p>
+            </div>
+        </div>
+    </div>
+
+</div>

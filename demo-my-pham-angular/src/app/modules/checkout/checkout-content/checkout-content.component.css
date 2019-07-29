@@ -1,0 +1,103 @@
+.main-content {
+    display: grid;
+    grid: 100% / 60% 40%;
+}
+
+.content-box__row {
+    position: relative;
+    zoom: 1;
+    border-radius: 4px;
+    background: #fff;
+    color: #737373;
+    box-shadow: 0 0 0 1px #d9d9d9;
+    margin: 7% 0;
+}
+
+.radio-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 7%;
+    font-size: 14px;
+}
+
+.radio-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.radio-wrapper .price-ship {
+    float: right;
+    clear: both;
+    font-weight: 700;
+    color: #4d4d4d;
+}
+
+.des-ship-cod {
+    background-color: #f8f8f8;
+    padding: 1.3em;
+    border-top: none;
+    border-radius: 4px;
+    color: #737373;
+    font-size: 14px;
+}
+
+.des-ship-cod p {
+    margin: 0;
+}
+
+.info-buying h3 {
+    margin: 0;
+    color: #333;
+    font-size: 20px;
+}
+
+.info-buying input {
+    width: 100%;
+    padding-bottom: 2%;
+}
+
+mat-form-field {
+    width: 85%;
+    font-size: 14px;
+}
+
+.info-shiping h3 {
+    margin: 0;
+    color: #333;
+    font-size: 20px;
+}
+
+.smallRadio .mat-radio-container {
+    height: 15px;
+    width: 15px;
+}
+
+.smallRadio .mat-radio-outer-circle {
+    height: 15px;
+    width: 15px;
+}
+
+.smallRadio .mat-radio-inner-circle {
+    height: 15px;
+    width: 15px;
+}
+
+.smallRadio .mat-radio-button .mat-radio-ripple {
+    height: 25px;
+    width: 25px;
+    left: calc(50% - 12px);
+    top: calc(50% - 14px);
+}
+
+.smallInput .mat-form-field-infix {
+    padding: 1%;
+}
+
+.smallInput .mat-form-field-wrapper {
+    padding: 0;
+}
+
+.smallInput .mat-form-field-label {
+    top: 24px;
+    padding-top: 0;
+}

@@ -22,6 +22,9 @@
         flex-flow: nowrap;
         padding: 0;
     }
+    .right-login {
+        display: none;
+    }
     /* .top-menu {
         display: none;
     } */
@@ -34,7 +37,7 @@
         width: 234px;
     }
     .hot-deal-content .product-card {
-        width: 150px;
+        width: 150px !important;
     }
     .hot-deal-content .product-name {
         font-size: 12px;
@@ -53,8 +56,8 @@
         grid: auto / auto auto auto;
     }
     .btn-show-all a {
-        padding: 10px 25px;
-        font-size: 11px;
+        padding: 10px 25px !important;
+        font-size: 11px !important;
     }
     .top-menu {
         padding: 0;
@@ -135,6 +138,24 @@
         text-align: center;
         line-height: 45px;
     }
+    .main-list-show-product {
+        display: block !important;
+    }
+    .side-bar {
+        display: none;
+    }
+    .show-cart-content-qty .number-sidebar {
+        height: 23px;
+        font-size: 15px;
+        font-weight: 400;
+        margin-top: 5px;
+    }
+    .main-content {
+        display: block;
+    }
+    .checkout-contain {
+        display: block;
+    }
 }
 
 @media (max-width: 480px) {
@@ -158,12 +179,11 @@
     }
     .right-cart {
         padding: 0;
-        padding-left: 5px;
     }
     .count-item-cart {
         height: 15px;
         min-width: 15px;
-        right: 0;
+        right: -4px;
         top: -8px;
     }
     .hot-deal-title {
@@ -177,7 +197,7 @@
         display: none;
     }
     .hot-deal-content {
-        grid: auto / auto auto;
+        grid: auto / auto auto !important;
     }
     .img-sale {
         display: block;
@@ -216,13 +236,14 @@
         font-size: 12px;
     }
     .slick-dots {
-        display: block;
+        display: block !important;
         text-align: center;
         margin: 0;
         padding: 0;
     }
     .slick-dots li {
         display: inline-block;
+        padding: 1%;
     }
     .slick-dots li.active button {
         background-color: #f33;
@@ -238,12 +259,6 @@
         font-size: 0;
         padding: 0;
         display: block;
-    }
-    .main-list-show-product {
-        display: block !important;
-    }
-    .side-bar {
-        display: none;
     }
     .sort-cate {
         display: none !important;
@@ -291,5 +306,16 @@
         font-weight: 400;
         width: 20px;
         margin-top: 9%;
+    }
+    .checkout-logo-center a img {
+        width: 40%;
+    }
+    .diskout-checkout input {
+        width: 65%;
+    }
+    .btn-send-info a {
+        padding: 11px 30px;
+        width: 73%;
+        font-size: 13px;
     }
 }

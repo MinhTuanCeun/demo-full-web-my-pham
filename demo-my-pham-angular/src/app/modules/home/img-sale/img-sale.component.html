@@ -1,0 +1,7 @@
+<div class="img-sale">
+    <div *ngFor="let item of imgSales" class="img-sale-item">
+        <a routerLink="/{{item.link}}" class="img-sale-item_hover_a" href="">
+            <img src="{{item.urlImg}}" alt="">
+        </a>
+    </div>
+</div>

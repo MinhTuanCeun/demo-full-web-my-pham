@@ -1,0 +1,71 @@
+<mat-dialog-content>
+    <div id="popup-cart-desktop">
+        <div class="title-popup-cart">
+            <h3>BẠN ĐÃ THÊM
+                <a></a> VÀO GIỎ HÀNG</h3>
+        </div>
+        <div class="title-quantity-popup">
+            <a (click)="closeDialog()" routerLink="/cart">Xem giỏ hàng</a>
+        </div>
+        <div class="content-popup-cart">
+            <div class="thead-popup">
+                <div>Sản phẩm</div>
+                <div>Đơn giá</div>
+                <div>Số lượng</div>
+                <div>Thành tiền</div>
+            </div>
+            <div *ngFor="let product of listCart" class="tbody-popup">
+                <div style="display: grid; grid: 100% / 20% 80%;">
+                    <div class="item-popup-img">
+                        <a routerLink="/detail">
+                            <img src="{{product.urlImg}}" alt="">
+                        </a>
+                    </div>
+                    <div class="item-popup-info">
+                        <p class="item-popup-name">
+                            <a routerLink="/detail">{{product.title}}</a>
+                        </p>
+                        <p class="item-popup-remove">
+                            <a (click)="removeItem(product)">bỏ sản phẩm</a>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="item-popup-price">
+                        <span>{{formmatPrice(product.newPrice)}}</span>
+                    </div>
+                </div>
+                <div>
+                    <button (click)="reduceItem(product)" class="item-popup-count">-</button>
+                    <input type="text" disabled value="{{product.qty}}" class="number-sidebar">
+                    <button (click)="increaseItem(product)" class="item-popup-count">+</button>
+                </div>
+                <div>
+                    <div class="item-popup-price">
+                        <span>{{formmatPrice(totalItem(product))}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tfoot-popup">
+                <div class="tfoot-popup-1">
+                    <div class="pull-left">
+                        <a (click)="closeDialog()" routerLink="/index">
+                            Tiếp tục mua hàng
+                        </a>
+                    </div>
+                    <div class="pull-right">
+                        <p>Thành tiền: <span>{{formmatPrice(total())}}</span></p>
+                    </div>
+                </div>
+                <div class="tfoot-popup-2">
+                    <a (click)="closeDialog()" routerLink="/checkout">
+                        <span>Thanh toán đơn hàng</span>
+                    </a>
+                </div>
+            </div>
+            <!-- <a href="" class="close-window">
+                <fa-icon icon="times"></fa-icon>
+            </a> -->
+        </div>
+    </div>
+</mat-dialog-content>

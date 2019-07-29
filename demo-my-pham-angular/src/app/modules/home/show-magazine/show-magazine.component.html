@@ -1,0 +1,18 @@
+<div style="text-align: center">
+    <h2>EVO MAGAZINE</h2>
+</div>
+<div class="magazine-show">
+    <div *ngFor=" let item of listmagazine" class="magazine-card">
+        <div class="magazine-img">
+            <a href="">
+                <img src="{{item.urlImg}}" alt="">
+            </a>
+            <div class="magazine-content">
+                <h3>{{item.name}}</h3>
+                <p>
+                    {{item.description}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+.cart-title h1 {
+    font-size: 26px;
+    line-height: 28px;
+    margin: 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    color: #1c1c1c;
+    margin-top: 3%;
+}
+
+.cart-title h1 span {
+    font-size: 14px;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.show-cart {
+    display: grid;
+    position: relative;
+    grid: 100% / 70% 30%;
+}
+
+.top-container {
+    margin: 0 5%;
+    padding: 0 15px;
+    display: block;
+}

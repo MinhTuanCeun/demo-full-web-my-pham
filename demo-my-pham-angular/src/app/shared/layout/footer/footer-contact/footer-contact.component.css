@@ -1,0 +1,22 @@
+.footer-contact h4 {
+    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    margin-bottom: 7px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    word-break: break-word;
+}
+
+.footer-contact h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footer-contact fa-icon {
+    padding-right: 10px
+}
