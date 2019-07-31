@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -17,7 +19,14 @@ export class DetailComponent {
         oldPrice: '1.100.000₫',
         qty: 1
     };
-    constructor() {
+    constructor(private route: ActivatedRoute) {
     }
+
+    // getHero(): void {
+    //   // The JavaScript (+) operator converts the string to a number
+    //   const id = +this.route.snapshot.paramMap.get('id');
+    //   this.heroService.getHero(id)
+    //     .subscribe(hero => this.hero = hero);
+    // }
 
 }

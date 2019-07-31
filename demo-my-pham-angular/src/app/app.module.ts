@@ -13,15 +13,23 @@ import { CheckoutModule } from './modules/checkout/checkout.module';
 import { DetailModule } from './modules/detail/detail.module';
 import { ContactModule } from './modules/contact/contact.module';
 import { HomeModule } from './modules/home/home.module';
+import { RegisterComponent } from './modules/register/register.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { NgxCaptchaModule } from 'ngx-captcha';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
     LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
+    NgxCaptchaModule,
     AppRoutingModule,
     FontAwesomeModule,
     FooterModule,

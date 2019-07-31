@@ -11,20 +11,20 @@
             <div class="hot-deal-content">
                 <div *ngFor="let item of listProductSales" class="product-card">
                     <div class="product-img">
-                        <a href="">
+                        <a routerLink="/detail/{{item.id}}">
                             <img src="{{item.urlImg}}" alt="">
                             <img class="hover_pic" src="{{item.urlImg}}" alt="">
                         </a>
                         <div class="hover_box">
                             <button (click)="openDialog(item)" class="btn_shopping"><fa-icon icon="shopping-basket"></fa-icon></button>
-                            <button class="btn_forward"><fa-icon icon="share"></fa-icon></button>
+                            <button routerLink="/detail/{{item.id}}" class="btn_forward"><fa-icon icon="share"></fa-icon></button>
                         </div>
                         <div class="label-sale">
                             {{item.sale}}
                         </div>
                         <div class="product-content">
                             <h3 class="product-name">
-                                <a href="">{{item.title}}</a>
+                                <a routerLink="/detail/{{item.id}}">{{item.title}}</a>
                             </h3>
                             <div class="product-price">
                                 <span class="new-price">{{formmatPrice(item.newPrice)}}</span>

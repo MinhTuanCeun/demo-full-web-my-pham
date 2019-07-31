@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
+import { Product } from '../model/product.model';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -11,7 +12,7 @@ const httpOptions = {
 @Injectable({ providedIn: 'root' })
 export class CartService {
 
-    listCart = [];
+    listCart: Product[] = [];
     constructor() { }
 
   /** GET heroes from the server */

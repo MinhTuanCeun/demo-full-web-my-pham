@@ -14,6 +14,9 @@ import { ShowMagazineComponent } from './show-magazine/show-magazine.component';
 import { SlideContentComponent } from './slide-content/slide-content.component';
 import { PopupCartModule } from 'src/app/shared/layout/popup-cart/popop-cart.module';
 
+import { NgxHmCarouselModule } from 'ngx-hm-carousel';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -28,9 +31,11 @@ import { PopupCartModule } from 'src/app/shared/layout/popup-cart/popop-cart.mod
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     FontAwesomeModule,
-    PopupCartModule
+    PopupCartModule,
+    NgxHmCarouselModule
   ],
   exports: [
     HomeComponent,
