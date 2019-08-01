@@ -9,9 +9,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
-    protected aFormGroup: FormGroup;
+    aFormGroup: FormGroup;
     constructor(private formBuilder: FormBuilder) {
     }
+    siteKey = '6LcCerAUAAAAAOSXOKDrLN5iJFLNE46gChYVpoNd';
 
     ngOnInit() {
       this.aFormGroup = this.formBuilder.group({

@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { PopupCartComponent } from 'src/app/shared/layout/popup-cart/popup-cart.component';
 import { CartService } from 'src/app/core/service/cart.service';
+import { HotDealService } from './service/hot-deal.service';
 
 
 @Component({
@@ -9,8 +10,8 @@ import { CartService } from 'src/app/core/service/cart.service';
   templateUrl: './hot-deal.component.html',
   styleUrls: ['../../../../mystyle/reponsive.css', '../../../../mystyle/mystyle.css']
 })
-export class HotDealComponent {
-
+export class HotDealComponent implements OnInit {
+    productSale;
     listProductSales = [
       {
         id: '1',
@@ -46,7 +47,21 @@ export class HotDealComponent {
         qty: 1
       }
     ];
-    constructor(public dialog: MatDialog, private cartService: CartService) {}
+    constructor(public dialog: MatDialog, private cartService: CartService, private hotDealService: HotDealService) {}
+
+    ngOnInit() {
+      this.getHotDeals();
+    }
+
+    getHotDeals() {
+      this.hotDealService.getHotDeals().subscribe(result => { this.productSale = result; console.log('bbbb', this.productSale); });
+    }
+
+    setNewPrice(price, discount) {
+      const disPer = price * (discount / 100);
+      const newPrice = price - disPer;
+      return this.formmatPrice(newPrice);
+    }
 
     openDialog(item) {
       this.cartService.addToListCart(item);

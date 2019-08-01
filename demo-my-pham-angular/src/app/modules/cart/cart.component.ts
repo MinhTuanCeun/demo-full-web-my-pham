@@ -9,6 +9,10 @@ import { CartService } from 'src/app/core/service/cart.service';
 })
 export class CartComponent {
     listCart;
+    subLink = {
+      title: 'Giỏ hàng',
+      link: 'cart'
+    };
     constructor(private service: CartService) {
       this.listCart = this.service.getListCart();
     }
