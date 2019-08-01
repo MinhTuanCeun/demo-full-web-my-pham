@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./list-product.component.css', '../../../mystyle/reponsive.css']
 })
 export class ListProductComponent {
-
+    subLink = {
+      title: 'Sản phẩm',
+      link: 'list'
+    };
     constructor() {
     }
 

@@ -187,7 +187,7 @@ app-top-right {
     -webkit-transition: 0.9s;
     -moz-transition: 0.9s;
     -ms-transition: 0.9s;
-    -o-transition: 0.9s;
+    transition: 0.9s;
     z-index: 1;
 }
 
@@ -201,7 +201,7 @@ app-top-right {
     -webkit-transition: 0.9s;
     -moz-transition: 0.9s;
     -ms-transition: 0.9s;
-    -o-transition: 0.9s;
+    transition: 0.9s;
     z-index: 1;
 }
 

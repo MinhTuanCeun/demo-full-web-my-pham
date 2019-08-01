@@ -9,26 +9,26 @@
                 <a id="more" href="">Xem thêm</a>
             </div>
             <div class="hot-deal-content">
-                <div *ngFor="let item of listProductSales" class="product-card">
+                <div *ngFor="let item of productSale" class="product-card">
                     <div class="product-img">
-                        <a routerLink="/detail/{{item.id}}">
-                            <img src="{{item.urlImg}}" alt="">
-                            <img class="hover_pic" src="{{item.urlImg}}" alt="">
+                        <a routerLink="/detail/{{item._id}}">
+                            <img src="{{item.UrlImg}}" alt="">
+                            <img class="hover_pic" src="{{item.UrlImg}}" alt="">
                         </a>
                         <div class="hover_box">
                             <button (click)="openDialog(item)" class="btn_shopping"><fa-icon icon="shopping-basket"></fa-icon></button>
-                            <button routerLink="/detail/{{item.id}}" class="btn_forward"><fa-icon icon="share"></fa-icon></button>
+                            <button routerLink="/detail/{{item._id}}" class="btn_forward"><fa-icon icon="share"></fa-icon></button>
                         </div>
                         <div class="label-sale">
-                            {{item.sale}}
+                            {{item.Discount}}%
                         </div>
                         <div class="product-content">
                             <h3 class="product-name">
-                                <a routerLink="/detail/{{item.id}}">{{item.title}}</a>
+                                <a routerLink="/detail/{{item._id}}">{{item.Name}}</a>
                             </h3>
                             <div class="product-price">
-                                <span class="new-price">{{formmatPrice(item.newPrice)}}</span>
-                                <span class="old-price">{{formmatPrice(item.oldPrice)}}</span>
+                                <span class="new-price">{{setNewPrice(item.Price, item.Discount)}}</span>
+                                <span class="old-price">{{formmatPrice(item.Price)}}</span>
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 <ul class="nav-menu">
-    <li class="nav-item" *ngFor="let item of menuBars">
-        <a (click)="show()" routerLink="/{{item.link}}">{{item.name}}</a>
+    <li class="nav-item" *ngFor="let item of menu">
+        <a (click)="show()" routerLink="/{{item.Link}}">{{item.Name}}</a>
         <fa-icon *ngIf="item.subMenu" icon="caret-down"></fa-icon>
         <ul *ngIf="item.subMenu" class="dropdown-menu ">
             <li *ngFor="let subItem of item.subMenu"><a routerLink="/{{subItem.link}}">{{subItem.name}}</a></li>
