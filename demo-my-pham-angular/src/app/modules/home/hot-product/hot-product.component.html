@@ -1,0 +1,46 @@
+<section>
+    <div class="wrap-new-product">
+        <div class="top-container">
+            <div class="header-new-product">
+                <div class="tt-header-new-product"></div>
+                <h2>
+                    <a href="">Sản phẩm bán chạy</a>
+                </h2>
+            </div>
+            <div class="hot-deal-content">
+                <div *ngFor="let item of listProductSales" class="product-card">
+                    <div class="product-img">
+                        <a href="">
+                            <img src="{{item.urlImg}}" alt="">
+                            <img class="hover_pic" src="{{item.urlImg}}" alt="">
+                        </a>
+                        <div class="hover_box">
+                            <button (click)="openDialog(item)" class="btn_shopping"><fa-icon icon="shopping-basket"></fa-icon></button>
+                            <button class="btn_forward"><fa-icon icon="share"></fa-icon></button>
+                        </div>
+                        <div class="label-sale">
+                            {{item.sale}}
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-name">
+                                <a href="">{{item.title}}</a>
+                            </h3>
+                            <div class="product-price">
+                                <span class="new-price">{{formmatPrice(item.newPrice)}}</span>
+                                <span class="old-price">{{formmatPrice(item.oldPrice)}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="slick-dots">
+                <li><button>1</button></li>
+                <li><button>2</button></li>
+                <li><button>3</button></li>
+            </ul>
+            <div class="btn-show-all">
+                <a href="" class="hover_a_show_all">Xem tất cả</a>
+            </div>
+        </div>
+    </div>
+</section>

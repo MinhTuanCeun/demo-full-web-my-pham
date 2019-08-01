@@ -1,0 +1,35 @@
+<header>
+    <div class="top-container">
+        <div class="top-header">
+            <app-top-logo></app-top-logo>
+            <app-top-search></app-top-search>
+            <app-top-right></app-top-right>
+        </div>
+        <div class="top-header-ipad">
+            <div class="top-logo">
+                <a (click)="showSideBarMobile()"><img src="http://bizweb.dktcdn.net/100/356/191/themes/721185/assets/logo-mb.png?1562812372850" alt="top-logo"></a>
+            </div>
+            <app-top-search></app-top-search>
+            <app-top-right></app-top-right>
+        </div>
+    </div>
+    <div class="top-container">
+        <div [ngClass]="{'active': showSideBar}" class="top-menu">
+            <div class="form-login-ipad">
+                <div class="login-header-ipad">
+                    <div class="back-from-menu">
+                        <fa-icon (click)="closeSideBarMobile()" icon="long-arrow-alt-left"></fa-icon>
+                    </div>
+                    <a>
+                        <img src="http://bizweb.dktcdn.net/100/356/191/themes/721185/assets/logo.png?1562812372850" alt="">
+                    </a>
+                </div>
+                <div class="first-menu-ipad">
+                    <a (click)="closeSideBarMobile()" routerLink="/login" style="border-right:  1px solid #f5f5f5;">Đăng nhập</a>
+                    <a (click)="closeSideBarMobile()" routerLink="/register">Đăng ký</a>
+                </div>
+            </div>
+            <app-menu-bar (onShow)="parentShow($event)"></app-menu-bar>
+        </div>
+    </div>
+</header>

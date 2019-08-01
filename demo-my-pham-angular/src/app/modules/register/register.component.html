@@ -1,0 +1,72 @@
+<section>
+    <h1 class="error">Đăng ký</h1>
+    <div class="w3layouts-two-grids">
+        <div class="mid-class">
+            <div class="txt-left-side">
+                <h2> Login Here </h2>
+                <p>Đăng nhập để dễ dàng nhận khuyến mãi và mua hàng nhanh hơn</p>
+                <form>
+                    <div class="form-left-to-w3l">
+                        <span aria-hidden="true">
+                                <fa-icon icon="envelope"></fa-icon>
+                            </span>
+                        <input type="email" name="name" placeholder="Họ và tên">
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="form-left-to-w3l">
+                        <span aria-hidden="true">
+                                    <fa-icon icon="envelope"></fa-icon>
+                                </span>
+                        <input type="text" name="phone" placeholder="Số điện thoại">
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="form-left-to-w3l">
+                        <span aria-hidden="true">
+                                        <fa-icon icon="envelope"></fa-icon>
+                                    </span>
+                        <input type="email" name="email" #email placeholder="Email">
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="form-left-to-w3l">
+                        <span aria-hidden="true">
+                                            <fa-icon icon="envelope"></fa-icon>
+                                        </span>
+                        <input type="password" name="password" placeholder="Password">
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="form-left-to-w3l ">
+
+                        <span aria-hidden="true">
+                                <fa-icon icon="lock"></fa-icon>
+                            </span>
+                        <input type="password" name="password" #pass placeholder="Nhập lại Password">
+                        <div class="clear"></div>
+                    </div>
+                    <form [formGroup]="aFormGroup">
+                        <ngx-recaptcha2 #captchaElem [siteKey]="siteKey" [useGlobalDomain]="false" formControlName="recaptcha">
+                        </ngx-recaptcha2>
+                    </form>
+                    <div class="btnn">
+                        <button type="submit">Register </button>
+                    </div>
+                </form>
+                <div class="w3layouts_more-buttn">
+                    <h3>Don't Have an account..?
+                        <a href="#">Register Here
+                            </a>
+                    </h3>
+                </div>
+
+            </div>
+            <div class="img-right-side">
+                <h3>Welcome To Allied Login Form</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget</p>
+                <img src="../../../assets/img/login-img/b11.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</section>

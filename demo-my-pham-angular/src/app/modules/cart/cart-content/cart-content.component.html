@@ -1,0 +1,28 @@
+<div *ngFor="let item of listCart" class="show-cart-content">
+    <div class="show-cart-content-img">
+        <a href=""><img src="{{item.urlImg}}" alt=""></a>
+    </div>
+    <div class="show-cart-content-info">
+        <a>
+            <h3>{{item.title}}</h3>
+        </a>
+        <p><a href="">Xóa</a></p>
+    </div>
+    <div class="show-cart-content-price">
+        <p class="red-text">
+
+            {{formmatPrice(totalItem(item))}}</p>
+    </div>
+    <div class="show-cart-content-qty">
+        <div style="margin-left: 7%;">
+            <button (click)="reduceItem(item)" class="item-popup-count">-</button>
+            <input type="text" disabled value="{{item.qty}}" class="number-sidebar">
+            <button (click)="increaseItem(item)" class="item-popup-count">+</button>
+        </div>
+        <div class="show-cart-content-price-mobie">
+            <p class="red-text">
+
+                {{formmatPrice(totalItem(item))}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<section>
+    <!-- <div class="slide-img">
+        <a href=""><img src="http://bizweb.dktcdn.net/100/356/191/themes/721185/assets/slider_1.jpg?1560243800421" alt=""></a>
+    </div> -->
+
+
+    <ngx-hm-carousel [(ngModel)]="index" [autoplay-speed]="speed" [autoplay]="autoplay" [autoplay-direction]="direction" [infinite]="infinite" [between-delay]="2000" [data]="avatars" [aniTime]="200" class="carousel text-accent">
+
+        <section ngx-hm-carousel-container class="content">
+            <article class="item cursor-pointer fade_animation" ngx-hm-carousel-item *ngFor="let avatar of avatars; let i = index" [ngClass]="{'visible': index===i}">
+                <div class="img" [style.backgroundImage]="'url('+avatar.url+')'">
+                </div>
+            </article>
+            <ng-template #infiniteContainer></ng-template>
+        </section>
+
+        <ng-template #carouselContent let-avatar let-i="index">
+            <article class="item cursor-pointer fade_animation" [ngClass]="{'visible': index===i}">
+                <div class="img" [style.backgroundImage]="'url('+avatar.url+')'">
+                </div>
+            </article>
+        </ng-template>
+
+        <ng-template #carouselPrev>
+            <div class="click-area">
+                <fa-icon icon="angle-left"></fa-icon>
+            </div>
+        </ng-template>
+        <ng-template #carouselNext>
+            <div class="click-area">
+                <fa-icon icon="angle-right"></fa-icon>
+            </div>
+        </ng-template>
+
+        <ng-template #carouselDot let-model>
+            <div class="ball bg-accent" [class.visible]="model.index === model.currentIndex"></div>
+        </ng-template>
+
+    </ngx-hm-carousel>
+</section>

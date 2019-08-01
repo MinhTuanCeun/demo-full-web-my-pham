@@ -1,0 +1,75 @@
+.main-list-show-product {
+    display: grid;
+    grid: 100% / 20% 80%;
+    margin: 1% 5% 2%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sort-cate {
+    margin-top: 5px;
+    display: inline-flex;
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 5px;
+}
+
+.sort-cate h3 {
+    color: #000;
+    font-size: 14px;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.sort-cate ul {
+    margin: 0;
+    padding: 0;
+    list-style: none inside;
+    display: flex;
+}
+
+.sort-cate ul li {
+    padding: 0 0 7px 7px;
+}
+
+.sort-cate ul li a {
+    color: #000;
+    font-size: 14px;
+    position: relative;
+    text-decoration: none;
+}
+
+.sort-cate ul li a i {
+    height: 14px;
+    width: 14px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -3px 0px 0 0;
+    position: relative;
+}
+
+.sort-cate ul li a i:hover {
+    border: 2px solid #f33;
+    height: 16px;
+    width: 16px;
+}
+
+.sort-cate ul li a i::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #f33;
+    position: absolute;
+    border-radius: 50%;
+    margin: 3px;
+    visibility: hidden;
+}
+
+.sort-cate ul li a i:hover::before {
+    visibility: unset;
+}
+
+.product-list {
+    width: 210px;
+}

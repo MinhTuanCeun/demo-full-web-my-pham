@@ -1,0 +1,129 @@
+.checkout-cart {
+    padding: 6% 5%;
+    color: #717171;
+    box-shadow: 1px 0 0 #e1e1e1 inset;
+    background: #fafafa;
+}
+
+.checkout-title h2 {
+    margin: 21px 0 19px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.list-checkout {
+    max-height: 465px;
+    overflow: auto;
+}
+
+table {
+    margin: 7px 0;
+    width: 100%;
+}
+
+.item-cart {
+    color: #4b4b4b;
+}
+
+.item-cart td:first-child {
+    width: 20%;
+}
+
+.item-cart td:first-child img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #e1e1e1;
+}
+
+.item-cart span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #4d4d4d;
+}
+
+.diskout-checkout input {
+    height: 20px;
+    width: 66%;
+    padding: 7px 12px;
+    font-size: 13px;
+    line-height: 1.428571429;
+    color: #555;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.diskout-checkout button {
+    margin-left: 13px;
+    background-color: #000000;
+    border-color: #000000;
+    color: #FFFFFF;
+    white-space: nowrap;
+    padding: 7px 12px;
+    font-size: 13px;
+    line-height: 1.428571429;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pay-checkout {
+    display: grid;
+    grid: auto / auto auto;
+    color: #4d4d4d;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.pay-checkout span {
+    padding: 4% 0;
+}
+
+.total-checkout {
+    display: grid;
+    grid: auto / auto auto;
+    color: #4d4d4d;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.end-checkout {
+    display: grid;
+    grid: 100% / 40% 60%;
+    padding: 10px 0;
+}
+
+.end-checkout button {
+    margin-left: 13px;
+    background-color: #000000;
+    border-color: #000000;
+    color: #FFFFFF;
+    white-space: nowrap;
+    padding: 7px 12px;
+    font-size: 18px;
+    line-height: 1.428571429;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.end-checkout a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #333;
+    margin: auto;
+}
+
+.end-checkout a:hover {
+    color: red;
+}
+
+.item-cart-img {
+    position: relative;
+}
+
+.item-cart-img span {
+    color: #e1e1e1;
+    position: absolute;
+    right: 0;
+    top: 2%;
+    background: #000000;
+}

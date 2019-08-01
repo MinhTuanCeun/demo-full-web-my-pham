@@ -1,0 +1,24 @@
+.input-top-search {
+    height: 40px;
+    margin: 2% 0;
+    border: 1px solid #c3c3c3;
+    background: #b3b2b3;
+    border-radius: 20px;
+    display: flex;
+}
+
+.top-search {
+    height: 100%;
+}
+
+.input-top-search input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 90%;
+    margin-left: 20px;
+}
+
+.input-top-search span {
+    margin: auto;
+}

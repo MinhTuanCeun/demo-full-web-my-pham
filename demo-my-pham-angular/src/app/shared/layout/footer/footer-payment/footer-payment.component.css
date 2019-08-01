@@ -1,0 +1,67 @@
+.footer-regis {
+    display: flex;
+    background: #fff;
+    width: 50%;
+}
+
+.footer-regis input {
+    height: 40px;
+    background-color: #fff;
+    line-height: 40px;
+    font-size: 14px;
+    width: 70%;
+    padding: 0 10px;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 0 !important;
+    position: relative;
+}
+
+.footer-regis span {
+    position: relative;
+    white-space: nowrap;
+    padding: 0;
+    flex-direction: row;
+}
+
+.footer-regis button {
+    padding-top: 0;
+    width: 100%;
+    padding-bottom: 0;
+    background-color: #000;
+    border: 2px solid #fff;
+    line-height: 37px;
+    color: #fff;
+    padding: 0 15px;
+    transition: background-color 0.2s ease-in;
+}
+
+.footer-regis button:hover {
+    background: #f33;
+}
+
+.footer-info p {
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-payment ul {
+    margin-bottom: 15px;
+    list-style: none inside;
+    padding-left: 0;
+    display: inline-flex;
+}
+
+.footer-payment ul li {
+    padding-right: 7px;
+}
+
+.footer-info h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    position: relative;
+}

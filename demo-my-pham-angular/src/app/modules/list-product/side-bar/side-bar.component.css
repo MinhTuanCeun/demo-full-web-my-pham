@@ -1,0 +1,36 @@
+.side-bar-title h3 {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 10px;
+    font-weight: 600;
+    color: #1c1c1c;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.side-bar-content ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.side-bar-content ul li {
+    padding: 10px;
+}
+
+.side-bar-content ul li a {
+    font-size: 14px;
+    padding-left: 0px;
+    padding-right: 25px;
+    color: #1c1c1c;
+    white-space: normal;
+    position: relative;
+    display: table;
+    width: 100%;
+    text-decoration: none;
+}
+
+.side-bar-content ul li a:hover {
+    color: red;
+}

@@ -1,0 +1,53 @@
+<section>
+    <h1 class="error">Đăng nhập</h1>
+    <div class="w3layouts-two-grids">
+        <div class="mid-class">
+            <div class="txt-left-side">
+                <h2> Login Here </h2>
+                <p>Đăng nhập để dễ dàng nhận khuyến mãi và mua hàng nhanh hơn</p>
+                <form>
+                    <div class="form-left-to-w3l">
+                        <span aria-hidden="true">
+                            <fa-icon icon="envelope"></fa-icon>
+                        </span>
+                        <input type="email" name="email" #email placeholder="Email" required="">
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="form-left-to-w3l ">
+
+                        <span aria-hidden="true">
+                            <fa-icon icon="lock"></fa-icon>
+                        </span>
+                        <input type="password" name="password" #pass placeholder="Password" required="">
+                        <div class="clear"></div>
+                    </div>
+                    <div class="main-two-w3ls">
+                        <div class="left-side-forget">
+                            <input type="checkbox" class="checked">
+                            <span class="remenber-me">Remember me </span>
+                        </div>
+                        <div class="right-side-forget">
+                            <a href="#" class="for">Forgot password...?</a>
+                        </div>
+                    </div>
+                    <div class="btnn">
+                        <button (click)="login(email.value, pass.value)" type="submit">Login </button>
+                    </div>
+                </form>
+                <div class="w3layouts_more-buttn">
+                    <h3>Don't Have an account..?
+                        <a routerLink="/register">Register Here
+                        </a>
+                    </h3>
+                </div>
+
+            </div>
+            <div class="img-right-side">
+                <h3>Welcome To Allied Login Form</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget</p>
+                <img src="../../../assets/img/login-img/b11.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</section>
