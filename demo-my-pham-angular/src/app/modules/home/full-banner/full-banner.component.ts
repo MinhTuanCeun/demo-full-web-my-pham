@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ImgSaleService } from 'src/app/core/service/img-sale.service';
 
 
 @Component({
@@ -7,11 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./full-banner.component.css', '../../../../mystyle/reponsive.css']
 })
 export class FullBannerComponent {
-    img = {
-            link: 'abc',
-            urlImg: 'http://bizweb.dktcdn.net/100/356/191/themes/721185/assets/evo_full_banner.jpg?1561955821978'
-        };
-    constructor() {
+    img = {};
+    constructor(private saleImgService: ImgSaleService) {
+      this.getFullBanner();
+    }
+
+    getFullBanner() {
+      this.saleImgService.getFullBanner().subscribe(result => { this.img = result; });
     }
 
 }

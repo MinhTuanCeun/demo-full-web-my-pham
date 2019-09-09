@@ -1,5 +1,5 @@
 <main>
-    <app-bread-crumb></app-bread-crumb>
+    <app-bread-crumb [subLink]="itemCatalog"></app-bread-crumb>
     <section>
         <div class="top-container">
             <div class="detail-product">
@@ -8,10 +8,10 @@
                 </div>
                 <div class="detail-info">
                     <div class="title-detail">
-                        <h1>{{product.title}}</h1>
+                        <h1>{{product.name}}</h1>
                     </div>
                     <div class="status-detail">
-                        <p>SKU: <span>(Đang cập nhật....)</span> | Thương hiệu <span>{{product.brand}}</span></p>
+                        <p>SKU: <span>(Đang cập nhật....)</span> | Loại hàng <span>{{itemCatalog.Name}}</span></p>
                     </div>
                     <div class="rating-detail">
                         <fa-icon icon="star"></fa-icon>
@@ -22,9 +22,9 @@
                     </div>
                     <div class="more-detail-info">
                         <div class="price-detail">
-                            <h2>{{product.newPrice}} <span>giá thị trường:</span> <del>{{product.oldPrice}}</del></h2>
-                            <p>Tiết kiệm: <span class="red-text">440.000₫</span></p>
-                            <p>Tình trạng: <span class="red-text">{{product.status}}</span></p>
+                            <h2>{{formmatPrice(setNewPrice(product.price, product.discount))}} <span>giá thị trường:</span> <del>{{formmatPrice(product.price)}}</del></h2>
+                            <p>Tiết kiệm: <span class="red-text">{{showDisCount(product.price, product.discount)}}</span></p>
+                            <p>Tình trạng: <span class="red-text">{{statusItem()}}</span></p>
                         </div>
                         <div class="description-detail">
                             <p>
@@ -41,14 +41,14 @@
                     <div class="qty-detail">
                         <label for="">Số lượng</label>
                         <div style="margin-left: 7%;">
-                            <button class="item-popup-count">-</button>
+                            <button (click)="reduceItem(product)" class="item-popup-count">-</button>
                             <input type="text" disabled value="{{product.qty}}" class="number-sidebar">
-                            <button class="item-popup-count">+</button>
+                            <button (click)="increaseItem(product)" class="item-popup-count">+</button>
                         </div>
                     </div>
                     <div class="btn-buy">
-                        <button>
-                            <h3>Mua ngay với giá <span>{{product.newPrice}}</span></h3>
+                        <button (click)="checkoutNow(product)" routerLink="/checkout">
+                            <h3>Mua ngay với giá <span>{{formmatPrice(totalItem(product))}}</span></h3>
                             <p>Đặt mua giao hàng tận nơi</p>
                         </button>
                     </div>

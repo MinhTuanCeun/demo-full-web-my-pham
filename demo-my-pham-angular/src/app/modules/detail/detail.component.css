@@ -50,14 +50,23 @@
 .detail-product {
     display: grid;
     grid: auto / auto auto;
+    margin-top: 3%;
 }
 
 .detail-img img {
     width: 100%;
 }
 
+.detail-img {
+    margin: 0 10%;
+}
+
+.detail-info {
+    margin-left: 4%;
+}
+
 .title-detail h1 {
-    margin-top: 6%;
+    margin-top: 0;
     font-size: 26px;
     line-height: 29px;
     font-weight: 550;

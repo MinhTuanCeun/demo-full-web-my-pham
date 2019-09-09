@@ -15,10 +15,16 @@ export class CartPaymentComponent {
       this.listCart = this.service.getListCart();
     }
 
+    setNewPrice(price, discount) {
+      const disPer = price * (discount / 100);
+      const newPrice = price - disPer;
+      return newPrice;
+    }
+
     total() {
       let s = 0;
       this.listCart.forEach(item => {
-        s += item.qty * item.newPrice;
+        s += item.qty * this.setNewPrice(item.price, item.discount);
       });
       return s;
     }

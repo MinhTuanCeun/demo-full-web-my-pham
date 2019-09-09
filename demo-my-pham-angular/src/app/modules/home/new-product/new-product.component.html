@@ -19,15 +19,15 @@
                             <button class="btn_forward"><fa-icon icon="share"></fa-icon></button>
                         </div>
                         <div class="label-sale">
-                            {{item.sale}}
+                            {{item.discount}}%
                         </div>
                         <div class="product-content">
                             <h3 class="product-name">
-                                <a href="">{{item.title}}</a>
+                                <a href="">{{item.name}}</a>
                             </h3>
                             <div class="product-price">
-                                <span class="new-price">{{formmatPrice(item.newPrice)}}</span>
-                                <span class="old-price">{{formmatPrice(item.oldPrice)}}</span>
+                                <span class="new-price">{{setNewPrice(item.price, item.discount)}}</span>
+                                <span class="old-price">{{formmatPrice(item.price)}}</span>
                             </div>
                         </div>
                     </div>

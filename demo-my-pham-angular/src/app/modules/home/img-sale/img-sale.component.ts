@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ImgSaleService } from 'src/app/core/service/img-sale.service';
 
 
 @Component({
@@ -7,16 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./img-sale.component.css', '../../../../mystyle/reponsive.css']
 })
 export class ImgSaleComponent {
-    imgSales = [
-        {
-            link: '',
-            urlImg: 'http://bizweb.dktcdn.net/100/356/191/themes/721185/assets/ant_index_banner_1.jpg?1560243800421'
-        }, {
-            link: '',
-            urlImg: 'http://bizweb.dktcdn.net/100/356/191/themes/721185/assets/ant_index_banner_2.jpg?1561955821978'
-        }
-    ];
-    constructor() {
+    imgSales;
+    constructor(private saleImgService: ImgSaleService) {
+        this.getSaleImgs();
     }
+
+    getSaleImgs() {
+        this.saleImgService.getSaleImgs().subscribe(result => { this.imgSales = result; });
+      }
 
 }

@@ -1,6 +1,5 @@
 import { Component, Output, EventEmitter, OnInit } from '@angular/core';
-import { MenuBarService } from './service/menu-bar.service';
-
+import { MenuBarService } from 'src/app/core/service/menu-bar.service';
 
 @Component({
   selector: 'app-menu-bar',
@@ -13,45 +12,7 @@ export class MenuBarComponent implements OnInit {
   @Output() onShow = new EventEmitter<boolean>();
   menu: any;
 
-  menuBars = [
-    {
-      link: 'index',
-      name: 'TRANG CHỦ'
-    }, {
-      link: 'list',
-      name: 'SẢN PHẨM'
-    }, {
-      link: 'introduce',
-      name: 'GIỚI THIỆU',
-      subMenu: [
-        {
-          link: 'introduce',
-          name: 'HỆ THỐNG CỬA HÀNG',
-        }, {
-          link: 'introduce',
-          name: 'CÂU HỎI THƯỜNG GẶP',
-        }
-      ]
-    }, {
-      link: 'new-product',
-      name: 'SẢN PHẨM MỚI'
-    }, {
-      link: 'sale-off',
-      name: 'KHUYẾN MÃI'
-    }, {
-      link: 'news',
-      name: 'TIN TỨC',
-      subMenu: [
-        {
-          link: 'introduce',
-          name: 'TƯ VẤN LÀM ĐẸP',
-        }
-      ]
-    }, {
-      link: 'contact',
-      name: 'LIÊN HỆ'
-    }
-  ];
+  menuBars;
 
   constructor(private menuBarService: MenuBarService) {
   }
@@ -61,7 +22,7 @@ export class MenuBarComponent implements OnInit {
   }
 
   getCatalogs(): void {
-    this.menuBarService.getCatalogs().subscribe(menu => { this.menu = menu; console.log('bbbb', this.menu); });
+    this.menuBarService.getCatalogs().subscribe(menu => { this.menu = menu; });
   }
 
   show() {

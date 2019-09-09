@@ -9,36 +9,15 @@ import { Product } from 'src/app/core/model/product.model';
   styleUrls: ['./cart-content.component.css', '../../../../mystyle/reponsive.css']
 })
 export class CartContentComponent {
-    // listCart = [
-    //   {
-    //     id: '1',
-    //     urlImg: 'http://bizweb.dktcdn.net/thumb/medium/100/356/191/products/1989741-l.jpg',
-    //     title: 'Tinh chất dưỡng và ngăn ngừa lão hóa vùng da quanh mắt Laneige Time Freeze Eye Serum EX 20ml',
-    //     price: '960.000₫',
-    //     qty: 1
-    //   }, {
-    //     id: '2',
-    //     urlImg: 'http://bizweb.dktcdn.net/thumb/medium/100/356/191/products/1989741-l.jpg',
-    //     title: 'Tinh chất dưỡng và ngăn ngừa lão hóa vùng da quanh mắt Laneige Time Freeze Eye Serum EX 20ml',
-    //     price: '960.000₫',
-    //     qty: 1
-    //   }, {
-    //     id: '3',
-    //     urlImg: 'http://bizweb.dktcdn.net/thumb/medium/100/356/191/products/1989741-l.jpg',
-    //     title: 'Tinh chất dưỡng và ngăn ngừa lão hóa vùng da quanh mắt Laneige Time Freeze Eye Serum EX 20ml',
-    //     price: '960.000₫',
-    //     qty: 1
-    //   }, {
-    //     id: '4',
-    //     urlImg: 'http://bizweb.dktcdn.net/thumb/medium/100/356/191/products/1989741-l.jpg',
-    //     title: 'Tinh chất dưỡng và ngăn ngừa lão hóa vùng da quanh mắt Laneige Time Freeze Eye Serum EX 20ml',
-    //     price: '960.000₫',
-    //     qty: 1
-    //   }
-    // ];
     listCart;
     constructor(private service: CartService) {
       this.listCart = this.service.getListCart();
+    }
+
+    setNewPrice(price, discount) {
+      const disPer = price * (discount / 100);
+      const newPrice = price - disPer;
+      return newPrice;
     }
 
     formmatPrice(price) {
@@ -56,6 +35,6 @@ export class CartContentComponent {
     }
 
     totalItem(item) {
-      return item.qty * item.newPrice;
+      return item.qty * this.setNewPrice(item.price, item.discount);
     }
 }

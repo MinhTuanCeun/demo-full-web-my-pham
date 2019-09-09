@@ -23,7 +23,7 @@
                     </div>
                     <div class="item-popup-info">
                         <p class="item-popup-name">
-                            <a routerLink="/detail">{{product.title}}</a>
+                            <a routerLink="/detail">{{product.name}}</a>
                         </p>
                         <p class="item-popup-remove">
                             <a (click)="removeItem(product)">bỏ sản phẩm</a>
@@ -32,7 +32,7 @@
                 </div>
                 <div>
                     <div class="item-popup-price">
-                        <span>{{formmatPrice(product.newPrice)}}</span>
+                        <span>{{formmatPrice(setNewPrice(product.price, product.discount))}}</span>
                     </div>
                 </div>
                 <div>

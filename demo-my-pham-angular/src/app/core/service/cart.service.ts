@@ -26,7 +26,7 @@ export class CartService {
         this.listCart.push(item);
     } else {
         check = this.listCart.find(e => {
-            return e.id === item.id;
+            return e._id === item._id;
         });
         if (check) {
             check.qty++;
@@ -38,8 +38,9 @@ export class CartService {
 
   deleteItem(item) {
     for ( let i = 0; i <= this.listCart.length; i++) {
-        if ( this.listCart[i].id === item.id) {
+        if ( this.listCart[i]._id === item._id) {
             this.listCart.splice(i, 1);
+            break;
         }
      }
   }

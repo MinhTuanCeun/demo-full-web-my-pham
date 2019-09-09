@@ -10,15 +10,15 @@ const httpOptions = {
 };
 
 @Injectable({ providedIn: 'root' })
-export class HotDealService {
+export class SlideContentService {
 
-private hotDealUrl = 'api/product';
+private slideUrl = 'api/slide-img';
 
 constructor(private http: HttpClient) { }
 
 /** GET heroes from the server */
-getHotDeals(): Observable<any[]> {
-    return this.http.get<any[]>(this.hotDealUrl);
-  }
+getSlideContents(): Observable<any[]> {
+    return this.http.get<any[]>(this.slideUrl);
+}
 
 }

@@ -8,7 +8,7 @@
 
         <section ngx-hm-carousel-container class="content">
             <article class="item cursor-pointer fade_animation" ngx-hm-carousel-item *ngFor="let avatar of avatars; let i = index" [ngClass]="{'visible': index===i}">
-                <div class="img" [style.backgroundImage]="'url('+avatar.url+')'">
+                <div class="img" [style.backgroundImage]="'url('+avatar.urlImg+')'">
                 </div>
             </article>
             <ng-template #infiniteContainer></ng-template>
@@ -16,7 +16,7 @@
 
         <ng-template #carouselContent let-avatar let-i="index">
             <article class="item cursor-pointer fade_animation" [ngClass]="{'visible': index===i}">
-                <div class="img" [style.backgroundImage]="'url('+avatar.url+')'">
+                <div class="img" [style.backgroundImage]="'url('+avatar.urlImg+')'">
                 </div>
             </article>
         </ng-template>

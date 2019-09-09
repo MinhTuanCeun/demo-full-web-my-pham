@@ -10,15 +10,19 @@ const httpOptions = {
 };
 
 @Injectable({ providedIn: 'root' })
-export class MenuBarService {
+export class ImgSaleService {
 
-private menuBarUrl = 'api/catalog';
+private imgSaleUrl = 'api/sale-img';
 
 constructor(private http: HttpClient) { }
 
 /** GET heroes from the server */
-getCatalogs(): Observable<any[]> {
-    return this.http.get<any[]>(this.menuBarUrl);
-  }
+getSaleImgs(): Observable<any[]> {
+    return this.http.get<any[]>(this.imgSaleUrl);
+}
+
+getFullBanner(): Observable<any[]> {
+    return this.http.get<any[]>(this.imgSaleUrl + '/full-banner');
+}
 
 }
